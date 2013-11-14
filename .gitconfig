@@ -1,0 +1,72 @@
+[user]
+  name = Name
+  email = email@example.com
+[alias]
+  co = checkout
+  b = branch -v --color
+  st = status
+  l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  ls = smart-log
+  cam = commit -am
+  pullr = pull --rebase
+  pulr = pull --rebase -X patience
+  rb = rebase
+  rbc = rebase --continue
+  rba = rebase --abort
+  rbm = rebase master
+  unpushed = rev-list HEAD --pretty ^origin/master
+  dif = diff
+  cp = cherry-pick
+  ci = commit
+  cia = commit --amend
+  cav = commit -av
+  cv = commit -v
+  a = add
+  ap = add -p
+  apa = add -p .
+  and = add -N
+  undo = reset HEAD^
+  m = merge --no-ff
+  bs = bisect
+  bss = bisect start
+  bsr = bisect reset
+  bsg = bisect good
+  bsb = bisect bad
+  sub = submodule
+  subs = submodule sync
+  sup = submodule update
+  cleanse = "!git ls-files --others --exclude-standard | xargs rm"
+  rma = "!git ls-files --deleted | xargs git rm"
+  review = diff master -U20 -b
+  nm = branch --no-merged
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  ui = true
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[merge]
+  tool = nano
+[mergetool "nano"]
+  cmd = nano -d -g $LOCAL $MERGED $REMOTE
+  keepbackup = false
+[repack]
+  usedeltabaseoffset = true
+[core]
+  editor = /usr/bin/nano
+  pager = "less -FRSX"
+  excludesfile = ~/.gitignore
+[push]
+  default = simple
