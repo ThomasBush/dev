@@ -1,0 +1,15 @@
+{
+	"color_scheme": "Packages/Theme - Nil/Tubnil.tmTheme",
+	"theme": "Nil.sublime-theme",
+	"sidebar_folders": true,
+	"colored_folder_glyphs": true,
+	"highlight_modified_tabs": true,
+	"tab_size": 2,
+  "translate_tabs_to_spaces": true,
+  "ensure_newline_at_eof_on_save": true,
+  "trim_trailing_white_space_on_save": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	]
+}
