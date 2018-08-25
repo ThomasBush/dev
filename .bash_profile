@@ -3,6 +3,27 @@ alias desk="cd ~/Desktop"
 alias ..="cd ../"
 alias ...="cd ../../"
 alias restartApache="sudo apachectl restart"
+alias be="bundle exec"
+alias site="cd ~/Sites"
+alias sites="cd ~/Sites"
+alias code="cd ~/Sites"
+alias asset="cd ~/Assets"
+alias o="open ."
+alias s="sublime ."
+alias cpd="be cap production deploy"
+alias cpc="be cap production rails:console"
+alias dbp="be cap production db:pull;bin/rails db:environment:set RAILS_ENV=development"
+alias csd="be cap staging deploy"
+alias ga="git add"
+alias gc="git commit"
+alias gs="git status"
+alias flush="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say 'get flushed'"
+alias xsi="xcode-select --install"
+alias reset_db_to_dev="bin/rails db:environment:set RAILS_ENV=development"
+alias dc="docker-compose"
+alias dm="docker-machine"
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 export PATH=/Applications/Postgres93.app/Contents/MacOS/bin:$PATH
 
@@ -66,6 +87,9 @@ export PS2="\[$ORANGE\]→ \[$RESET\]"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-
-
 export PATH="/usr/local/mysql/bin:$PATH"
+
+export START="/Users/tom.bush/Sites/"
+if [[ $PWD == $HOME ]]; then
+    cd $START
+fi
